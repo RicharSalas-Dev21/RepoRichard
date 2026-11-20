@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>José Ricardo Salas Tejeda | Portafolio de Evidencias</title>
+<meta name="description" content="Portafolio de José Ricardo Salas Tejeda: automatizador QA y desarrollador de software multiplataforma.">
+<style>
+  :root{
+    --guinda:#7b1e3a; --guinda-osc:#5a1229; --claro:#f7f2f4; --texto:#222; --suave:#666; --borde:#e5d9de;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Segoe UI",Roboto,Arial,sans-serif;color:var(--texto);background:#fff;line-height:1.6}
+  a{color:var(--guinda);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+
+  /* Navegación */
+  nav{position:sticky;top:0;background:var(--guinda-osc);z-index:10}
+  nav .wrap{display:flex;gap:18px;flex-wrap:wrap;padding:12px 20px}
+  nav a{color:#fff;font-size:.92rem;font-weight:600}
+
+  /* Encabezado */
+  header{background:linear-gradient(135deg,var(--guinda) 0%,var(--guinda-osc) 100%);color:#fff;padding:56px 0}
+  header .wrap{display:flex;gap:36px;align-items:center;flex-wrap:wrap}
+  .foto{width:190px;height:190px;border-radius:50%;border:5px solid #fff;object-fit:cover;background:#fff;flex-shrink:0}
+  .foto-fallback{width:190px;height:190px;border-radius:50%;border:5px solid #fff;background:var(--guinda-osc);
+    display:none;align-items:center;justify-content:center;font-size:3.4rem;font-weight:700;flex-shrink:0}
+  header h1{font-size:2.2rem;line-height:1.15;margin-bottom:6px}
+  header .rol{font-size:1.15rem;opacity:.95;margin-bottom:14px}
+  header p.resumen{max-width:560px;opacity:.95}
+  .botones{margin-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+  .btn{display:inline-block;padding:10px 18px;border-radius:6px;font-weight:600;font-size:.95rem}
+  .btn.principal{background:#fff;color:var(--guinda)}
+  .btn.sec{border:2px solid #fff;color:#fff}
+  .btn:hover{text-decoration:none;opacity:.9}
+
+  /* Secciones */
+  section{padding:48px 0;border-bottom:1px solid var(--borde)}
+  section:nth-of-type(even){background:var(--claro)}
+  h2{color:var(--guinda);font-size:1.6rem;margin-bottom:22px;display:flex;align-items:center;gap:12px}
+  h2::after{content:"";flex:1;height:3px;background:var(--guinda);opacity:.25;border-radius:2px}
+  h3{font-size:1.1rem;margin-bottom:4px}
+
+  .datos{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+  .dato{background:#fff;border:1px solid var(--borde);border-radius:8px;padding:14px 16px}
+  .dato small{display:block;color:var(--suave);text-transform:uppercase;letter-spacing:.05em;font-size:.72rem}
+  .dato span{font-weight:600;word-break:break-word}
+
+  .item{background:#fff;border-left:5px solid var(--guinda);border-radius:6px;padding:16px 20px;margin-bottom:16px;
+    box-shadow:0 1px 4px rgba(0,0,0,.06)}
+  .item .fecha{color:var(--suave);font-size:.88rem;margin-bottom:6px}
+  .item ul{margin:8px 0 0 20px}
+  .item li{margin-bottom:3px}
+
+  .grupo{margin-bottom:22px}
+  .grupo h3{margin-bottom:10px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{background:#fff;border:2px solid var(--guinda);color:var(--guinda);padding:5px 14px;border-radius:999px;
+    font-weight:600;font-size:.9rem}
+
+  .proyectos{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:20px}
+  .card{background:#fff;border:1px solid var(--borde);border-top:6px solid var(--guinda);border-radius:8px;
+    padding:20px;display:flex;flex-direction:column}
+  .card .tipo{color:var(--suave);font-size:.85rem;margin-bottom:8px}
+  .card p{margin-bottom:10px;font-size:.96rem}
+  .card ul{margin:0 0 12px 18px;font-size:.93rem}
+  .card .tech{margin-top:auto;margin-bottom:14px}
+  .card .tech .chip{font-size:.78rem;padding:3px 10px;border-width:1.5px}
+  .card .btn{background:var(--guinda);color:#fff;text-align:center}
+
+  footer{background:var(--guinda-osc);color:#fff;text-align:center;padding:26px 20px;font-size:.9rem}
+
+  @media (max-width:640px){
+    header{padding:36px 0}
+    header .wrap{flex-direction:column;text-align:center}
+    header h1{font-size:1.8rem}
+    .botones{justify-content:center}
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#inicio">Inicio</a>
+    <a href="#datos">Datos personales</a>
+    <a href="#estudios">Estudios</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#tecnologias">Tecnologías</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+</nav>
+
+<!-- ENCABEZADO -->
+<header id="inicio">
+  <div class="wrap">
+    <!-- Coloca tu fotografía en la misma carpeta con el nombre foto.jpg -->
+    <img class="foto" src="foto.jpg" alt="Fotografía de José Ricardo Salas Tejeda"
+         onerror="this.style.display='none';document.getElementById('iniciales').style.display='flex'">
+    <div class="foto-fallback" id="iniciales">JR</div>
+    <div>
+      <h1>José Ricardo<br>Salas Tejeda</h1>
+      <div class="rol">Automatizador QA Jr · Desarrollador de Software Multiplataforma</div>
+      <p class="resumen">
+        Estudiante de Desarrollo de Software Multiplataforma con experiencia profesional en pruebas
+        funcionales y automatizadas (Selenium WebDriver, Java, Jira). Desarrollo aplicaciones móviles,
+        web y videojuegos en equipo, con actitud proactiva y mucho deseo de aprender.
+      </p>
+      <div class="botones">
+        <a class="btn principal" href="#proyectos">Ver proyectos</a>
+        <a class="btn sec" href="#contacto">Contactarme</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- DATOS PERSONALES -->
+<section id="datos">
+  <div class="wrap">
+    <h2>Datos personales</h2>
+    <div class="datos">
+      <div class="dato"><small>Nombre completo</small><span>José Ricardo Salas Tejeda</span></div>
+      <div class="dato"><small>Ubicación</small><span>Nicolás Romero, Estado de México, México</span></div>
+      <div class="dato"><small>Correo</small><span><a href="mailto:richarsalasjrst9@gmail.com">richarsalasjrst9@gmail.com</a></span></div>
+      <div class="dato"><small>Teléfono</small><span><a href="tel:+525625513633">56 2551 3633</a></span></div>
+      <div class="dato"><small>Perfil</small><span>Estudiante y automatizador QA Jr</span></div>
+      <div class="dato"><small>Disponibilidad</small><span>Horarios flexibles</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ESTUDIOS -->
+<section id="estudios">
+  <div class="wrap">
+    <h2>Estudios</h2>
+    <div class="item">
+      <div class="fecha">Septiembre 2022 – 2026</div>
+      <h3>Desarrollo de Software Multiplataforma</h3>
+      <div>Universidad Tecnológica Fidel Velázquez (UTFV), Nicolás Romero</div>
+    </div>
+    <div class="item">
+      <div class="fecha">Agosto 2019 – Septiembre 2022 · Certificado</div>
+      <h3>Técnico en Programación</h3>
+      <div>CECyTEM Plantel 1, Nicolás Romero</div>
+    </div>
+    <div class="item">
+      <div class="fecha">Certificación</div>
+      <h3>Fundamentos de la Gestión de Proyectos</h3>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCIA -->
+<section id="experiencia">
+  <div class="wrap">
+    <h2>Experiencia profesional</h2>
+    <div class="item">
+      <div class="fecha">Agosto 2024 – Presente · Ciudad de México</div>
+      <h3>Automatizador Jr (QA) · MTP</h3>
+      <ul>
+        <li>Análisis de requerimientos funcionales y elaboración de matrices de prueba.</li>
+        <li>Desarrollo de scripts automatizados con Selenium WebDriver, Java y Page Object Model (POM).</li>
+        <li>Control y seguimiento de versiones de código.</li>
+        <li>Generación de evidencias de ejecución de pruebas manuales y automatizadas.</li>
+        <li>Identificación y registro de defectos en Jira.</li>
+      </ul>
+    </div>
+    <div class="item">
+      <div class="fecha">Abril 2024 – Agosto 2024 · Ciudad de México</div>
+      <h3>Tester Trainee · MTP</h3>
+      <ul>
+        <li>Análisis de requerimientos y elaboración de matriz de casos de prueba.</li>
+        <li>Ejecución de casos de prueba y documentación de evidencias.</li>
+        <li>Seguimiento, registro y cierre de defectos en Jira.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- TECNOLOGÍAS -->
+<section id="tecnologias">
+  <div class="wrap">
+    <h2>Tecnologías y herramientas</h2>
+
+    <div class="grupo">
+      <h3>Lenguajes de programación</h3>
+      <div class="chips">
+        <span class="chip">Java</span>
+        <span class="chip">Kotlin</span>
+        <span class="chip">Python</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">HTML5</span>
+        <span class="chip">CSS3</span>
+        <span class="chip">R</span>
+        <span class="chip">GDScript</span>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <h3>Bases de datos</h3>
+      <div class="chips">
+        <span class="chip">SQL</span>
+        <span class="chip">MySQL</span>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <h3>Plataformas, frameworks y herramientas</h3>
+      <div class="chips">
+        <span class="chip">Android Studio</span>
+        <span class="chip">Godot Engine</span>
+        <span class="chip">Selenium WebDriver</span>
+        <span class="chip">Page Object Model</span>
+        <span class="chip">Jira</span>
+        <span class="chip">Git</span>
+        <span class="chip">GitHub</span>
+        <span class="chip">Docker</span>
+        <span class="chip">Jenkins</span>
+        <span class="chip">Visual Studio Code</span>
+        <span class="chip">PWA</span>
+        <span class="chip">Power BI</span>
+        <span class="chip">Excel</span>
+      </div>
+    </div>
+
+    <div class="grupo">
+      <h3>Áreas de conocimiento</h3>
+      <div class="chips">
+        <span class="chip">Pruebas de software</span>
+        <span class="chip">Automatización QA</span>
+        <span class="chip">Desarrollo móvil</span>
+        <span class="chip">Desarrollo web</span>
+        <span class="chip">Ciencia de datos</span>
+        <span class="chip">Machine Learning básico</span>
+        <span class="chip">CI/CD</span>
+        <span class="chip">Trabajo en equipo</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROYECTOS -->
+<section id="proyectos">
+  <div class="wrap">
+    <h2>Proyectos</h2>
+    <div class="proyectos">
+
+      <!-- PROYECTO 1 -->
+      <article class="card">
+        <h3>Five Nights at UTFV</h3>
+        <div class="tipo">Videojuego 3D de terror · Proyecto en equipo · 2026</div>
+        <p>Videojuego de supervivencia estilo Five Nights at Freddy's ambientado en un edificio de la UTFV.
+           El jugador debe sobrevivir hasta las 6:00 AM de la noche 6.</p>
+        <ul>
+          <li>Control con mouse: puerta, linterna, armario y cámaras.</li>
+          <li>Menú principal desarrollado en Godot.</li>
+          <li>Gestión del repositorio y flujo de trabajo en GitHub.</li>
+          <li>Jugable y descargable en PC.</li>
+        </ul>
+        <div class="tech chips">
+          <span class="chip">Godot</span><span class="chip">GDScript</span><span class="chip">Git</span>
+          <span class="chip">GitHub</span><span class="chip">Blender</span>
+        </div>
+        <!-- Reemplaza por el link directo al repositorio/descarga cuando sea público -->
+        <a class="btn" href="https://github.com/Five-nights-utfv" target="_blank" rel="noopener">Ver en GitHub</a>
+      </article>
+
+      <!-- PROYECTO 2 -->
+      <article class="card">
+        <h3>CafeDragon</h3>
+        <div class="tipo">App móvil de pedidos · Proyecto en equipo (5 integrantes)</div>
+        <p>Aplicación para que los estudiantes de la UTFV consulten el menú de la cafetería y realicen pedidos.</p>
+        <ul>
+          <li>Inicio de sesión con cuenta institucional.</li>
+          <li>Menú por categorías con precios y carrito de compras.</li>
+          <li>Selección de edificio de entrega y último pedido.</li>
+          <li>Mapa y perfil con cierre de sesión.</li>
+          <li>Documentación y pruebas PWA (App Shell, manifiesto JSON).</li>
+        </ul>
+        <div class="tech chips">
+          <span class="chip">Kotlin</span><span class="chip">Android Studio</span><span class="chip">PWA</span>
+          <span class="chip">Docker</span><span class="chip">GitHub</span>
+        </div>
+        <!-- CAMBIA ESTE LINK por el de tu repositorio de CafeDragon -->
+        <a class="btn" href="https://github.com/TU-USUARIO/cafedragon" target="_blank" rel="noopener">Ver proyecto</a>
+      </article>
+
+      <!-- PROYECTO 3 -->
+      <article class="card">
+        <h3>SignoZVoice</h3>
+        <div class="tipo">App móvil de accesibilidad · Community Communication Solutions</div>
+        <p>Aplicación que traduce texto escrito a animaciones en Lengua de Señas Mexicana (sin reconocimiento por cámara).</p>
+        <ul>
+          <li>Rol: desarrollador y colaborador de documentación.</li>
+          <li>Análisis de usabilidad y accesibilidad (WCAG 2.1, heurísticas de Nielsen).</li>
+          <li>Flujo de usuario de 7 pasos y requerimientos de negocio.</li>
+          <li>Maqueta funcional con navegación por pestañas e ilustraciones SVG.</li>
+        </ul>
+        <div class="tech chips">
+          <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+          <span class="chip">SVG</span>
+        </div>
+        <!-- CAMBIA ESTE LINK por el de tu repositorio o demo de SignoZVoice -->
+        <a class="btn" href="https://github.com/TU-USUARIO/signozvoice" target="_blank" rel="noopener">Ver proyecto</a>
+      </article>
+
+      <!-- PROYECTO 4 (opcional) -->
+      <article class="card">
+        <h3>Portal de Conferencia Magistral</h3>
+        <div class="tipo">Aplicación web · Proyecto escolar</div>
+        <p>Portal web para gestionar una conferencia magistral con registro de asistentes y control de asientos.</p>
+        <ul>
+          <li>Registro de asistentes con base de datos.</li>
+          <li>Asignación de asientos.</li>
+          <li>Generación de códigos QR.</li>
+          <li>Notificaciones por WhatsApp.</li>
+        </ul>
+        <div class="tech chips">
+          <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+          <span class="chip">SQL</span>
+        </div>
+        <!-- CAMBIA ESTE LINK por el de tu repositorio -->
+        <a class="btn" href="https://github.com/TU-USUARIO/conferencia-magistral" target="_blank" rel="noopener">Ver proyecto</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto">
+  <div class="wrap">
+    <h2>Contacto</h2>
+    <div class="datos">
+      <div class="dato"><small>Correo</small><span><a href="mailto:richarsalasjrst9@gmail.com">richarsalasjrst9@gmail.com</a></span></div>
+      <div class="dato"><small>Teléfono</small><span><a href="tel:+525625513633">56 2551 3633</a></span></div>
+      <div class="dato"><small>GitHub</small><span><a href="https://github.com/TU-USUARIO" target="_blank" rel="noopener">github.com/TU-USUARIO</a></span></div>
+      <div class="dato"><small>LinkedIn</small><span><a href="https://www.linkedin.com/in/TU-PERFIL" target="_blank" rel="noopener">linkedin.com/in/TU-PERFIL</a></span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2026 José Ricardo Salas Tejeda · Portafolio de Evidencias · Universidad Tecnológica Fidel Velázquez
+</footer>
+
+</body>
+</html>
